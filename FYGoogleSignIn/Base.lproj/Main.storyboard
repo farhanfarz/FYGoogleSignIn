@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FYGoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgu-pO-5NW">
+                                <rect key="frame" x="191" y="282" width="217" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="0D1-tJ-3lO"/>
+                                    <constraint firstAttribute="width" constant="217" id="AGI-iz-JMG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Sign In With Google"/>
+                                <connections>
+                                    <action selector="buttonActionSignInWithGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B8L-f2-TW9"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAK-qT-aRe" customClass="GIDSignInButton">
+                                <rect key="frame" x="180" y="327" width="240" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="FUs-y6-fCO"/>
+                                    <constraint firstAttribute="height" constant="44" id="x9S-8F-16e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LAK-qT-aRe" firstAttribute="top" secondItem="sgu-pO-5NW" secondAttribute="bottom" constant="8" id="D6J-5S-1LY"/>
+                            <constraint firstItem="sgu-pO-5NW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Mfy-C0-knX"/>
+                            <constraint firstItem="sgu-pO-5NW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aTq-QA-HLx"/>
+                            <constraint firstItem="LAK-qT-aRe" firstAttribute="centerX" secondItem="sgu-pO-5NW" secondAttribute="centerX" id="uc3-yn-VH8"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonGIDSignIn" destination="LAK-qT-aRe" id="yp0-C6-6hb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="203" y="106"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="EvR-F2-ZER">
+            <objects>
+                <viewController storyboardIdentifier="HomeVCStoryboardIdentifier" id="JnA-4j-40a" customClass="FYHomeViewController" customModule="FYGoogleSignIn" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBn-PT-tfg"/>
+                        <viewControllerLayoutGuide type="bottom" id="RcQ-hO-hTQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mVB-oh-69E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFP-tL-gi1">
+                                <rect key="frame" x="191" y="281" width="217" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="jUN-YJ-6wZ"/>
+                                    <constraint firstAttribute="width" constant="217" id="nel-JR-RGa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Logout From Google"/>
+                                <connections>
+                                    <action selector="buttonActionLogoutFromGoogle:" destination="JnA-4j-40a" eventType="touchUpInside" id="iPn-Ob-3e6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WFP-tL-gi1" firstAttribute="centerY" secondItem="mVB-oh-69E" secondAttribute="centerY" id="2qC-Sk-jhR"/>
+                            <constraint firstItem="WFP-tL-gi1" firstAttribute="centerX" secondItem="mVB-oh-69E" secondAttribute="centerX" id="hCi-xd-5cZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6lz-fH-rju" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="106"/>
         </scene>
     </scenes>
 </document>

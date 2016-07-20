@@ -13,9 +13,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if window == nil {
+            window = UIWindow(frame: UIScreen.mainScreen().bounds)
+            window?.makeKeyAndVisible()
+            
+        }
+        window?.tintColor = UIColor.blackColor()
+        window?.clipsToBounds = true
+        
+        // Initialize sign-in
+        var configureError: NSError?
+        GGLContext.sharedInstance().configureWithError(&configureError)
+        assert(configureError == nil, "Error configuring Google services: \(configureError)")
+        
+        if (GIDSignIn.sharedInstance().hasAuthInKeychain()) {
+            GIDSignIn.sharedInstance().signInSilently()
+            
+            customizeForHome()
+            
+            return true
+        }
+
+        customizeForLogin()
+        
         return true
     }
 
@@ -41,6 +64,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(application: UIApplication,
+                     openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        
+        return GIDSignIn.sharedInstance().handleURL(url, sourceApplication: sourceApplication, annotation: annotation)
+    }
 
 }
 
+extension AppDelegate {
+    
+    /////////////////////////////////////////////////////////////////////////////
+    //
+    // MARK: - Methods
+    //
+    /////////////////////////////////////////////////////////////////////////////
+    
+    func customizeForLogin() {
+        
+        if let loginViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? ViewController {
+            loginViewController.delegate = self
+            window?.rootViewController = loginViewController
+        }
+    }
+    
+    func customizeForHome() {
+        
+        if let homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("HomeVCStoryboardIdentifier") as? FYHomeViewController {
+            homeViewController.delegate = self
+            window?.rootViewController = homeViewController
+        }
+    }
+}
+
+extension AppDelegate: FYAuthenticationProtocol {
+    
+    /////////////////////////////////////////////////////////////////////////////
+    //
+    // MARK: - FYAuthenticationProtocol
+    //
+    /////////////////////////////////////////////////////////////////////////////
+    
+    func viewController(viewController: UIViewController, didSuccessfullyLoginUser user: AnyObject) {
+        customizeForHome()
+    }
+    
+    func viewController(viewController: UIViewController, didFailToAuthenticateWithError error: NSError?) {
+        
+    }
+    
+    func viewController(viewController: UIViewController, didLogoutUser user: AnyObject?) {
+        customizeForLogin()
+    }
+}

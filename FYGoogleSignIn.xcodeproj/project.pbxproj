@@ -7,14 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149E0FC823A26F923FBDA566 /* Pods_FYGoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC546AEDEDE797191560B7BD /* Pods_FYGoogleSignIn.framework */; };
 		DFD2DED01D3DEA9B001B77EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2DECF1D3DEA9B001B77EA /* AppDelegate.swift */; };
 		DFD2DED21D3DEA9B001B77EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2DED11D3DEA9B001B77EA /* ViewController.swift */; };
 		DFD2DED51D3DEA9B001B77EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD2DED31D3DEA9B001B77EA /* Main.storyboard */; };
 		DFD2DED71D3DEA9B001B77EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD2DED61D3DEA9B001B77EA /* Assets.xcassets */; };
 		DFD2DEDA1D3DEA9B001B77EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFD2DED81D3DEA9B001B77EA /* LaunchScreen.storyboard */; };
+		DFD2DEE31D3DF437001B77EA /* FYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2DEE21D3DF437001B77EA /* FYHomeViewController.swift */; };
+		DFD2DEE51D3DFB95001B77EA /* FYAuthenticationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD2DEE41D3DFB95001B77EA /* FYAuthenticationProtocol.swift */; };
+		DFD2DEE71D3E052F001B77EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DFD2DEE61D3E052F001B77EA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		199C7EC90C8FA9F9259184EE /* Pods-FYGoogleSignIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYGoogleSignIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-FYGoogleSignIn/Pods-FYGoogleSignIn.release.xcconfig"; sourceTree = "<group>"; };
+		591123B5940E3817C7FA13FE /* Pods-FYGoogleSignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FYGoogleSignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FYGoogleSignIn/Pods-FYGoogleSignIn.debug.xcconfig"; sourceTree = "<group>"; };
 		DFD2DECC1D3DEA9B001B77EA /* FYGoogleSignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FYGoogleSignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD2DECF1D3DEA9B001B77EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFD2DED11D3DEA9B001B77EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +28,11 @@
 		DFD2DED61D3DEA9B001B77EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFD2DED91D3DEA9B001B77EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFD2DEDB1D3DEA9B001B77EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DFD2DEE11D3DF20A001B77EA /* FYGoogleSignIn-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FYGoogleSignIn-Bridging-Header.h"; sourceTree = "<group>"; };
+		DFD2DEE21D3DF437001B77EA /* FYHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYHomeViewController.swift; sourceTree = "<group>"; };
+		DFD2DEE41D3DFB95001B77EA /* FYAuthenticationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FYAuthenticationProtocol.swift; sourceTree = "<group>"; };
+		DFD2DEE61D3E052F001B77EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EC546AEDEDE797191560B7BD /* Pods_FYGoogleSignIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FYGoogleSignIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149E0FC823A26F923FBDA566 /* Pods_FYGoogleSignIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAA5CEB28E6DE03E57ED0308 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				591123B5940E3817C7FA13FE /* Pods-FYGoogleSignIn.debug.xcconfig */,
+				199C7EC90C8FA9F9259184EE /* Pods-FYGoogleSignIn.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C43916756EA2281EE153E085 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC546AEDEDE797191560B7BD /* Pods_FYGoogleSignIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DFD2DEC31D3DEA9B001B77EA = {
 			isa = PBXGroup;
 			children = (
 				DFD2DECE1D3DEA9B001B77EA /* FYGoogleSignIn */,
 				DFD2DECD1D3DEA9B001B77EA /* Products */,
+				BAA5CEB28E6DE03E57ED0308 /* Pods */,
+				C43916756EA2281EE153E085 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,10 +87,14 @@
 			children = (
 				DFD2DECF1D3DEA9B001B77EA /* AppDelegate.swift */,
 				DFD2DED11D3DEA9B001B77EA /* ViewController.swift */,
+				DFD2DEE21D3DF437001B77EA /* FYHomeViewController.swift */,
 				DFD2DED31D3DEA9B001B77EA /* Main.storyboard */,
 				DFD2DED61D3DEA9B001B77EA /* Assets.xcassets */,
 				DFD2DED81D3DEA9B001B77EA /* LaunchScreen.storyboard */,
 				DFD2DEDB1D3DEA9B001B77EA /* Info.plist */,
+				DFD2DEE61D3E052F001B77EA /* GoogleService-Info.plist */,
+				DFD2DEE11D3DF20A001B77EA /* FYGoogleSignIn-Bridging-Header.h */,
+				DFD2DEE41D3DFB95001B77EA /* FYAuthenticationProtocol.swift */,
 			);
 			path = FYGoogleSignIn;
 			sourceTree = "<group>";
@@ -71,9 +106,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFD2DEDE1D3DEA9B001B77EA /* Build configuration list for PBXNativeTarget "FYGoogleSignIn" */;
 			buildPhases = (
+				9A5C9B73F82C19C08FF491BD /* 📦 Check Pods Manifest.lock */,
 				DFD2DEC81D3DEA9B001B77EA /* Sources */,
 				DFD2DEC91D3DEA9B001B77EA /* Frameworks */,
 				DFD2DECA1D3DEA9B001B77EA /* Resources */,
+				D7149D897BCD3B11C96F78C9 /* 📦 Embed Pods Frameworks */,
+				0F822C1E748803829D5BAA32 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,12 +161,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD2DEDA1D3DEA9B001B77EA /* LaunchScreen.storyboard in Resources */,
+				DFD2DEE71D3E052F001B77EA /* GoogleService-Info.plist in Resources */,
 				DFD2DED71D3DEA9B001B77EA /* Assets.xcassets in Resources */,
 				DFD2DED51D3DEA9B001B77EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F822C1E748803829D5BAA32 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FYGoogleSignIn/Pods-FYGoogleSignIn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A5C9B73F82C19C08FF491BD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D7149D897BCD3B11C96F78C9 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FYGoogleSignIn/Pods-FYGoogleSignIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFD2DEC81D3DEA9B001B77EA /* Sources */ = {
@@ -137,6 +224,8 @@
 			files = (
 				DFD2DED21D3DEA9B001B77EA /* ViewController.swift in Sources */,
 				DFD2DED01D3DEA9B001B77EA /* AppDelegate.swift in Sources */,
+				DFD2DEE51D3DFB95001B77EA /* FYAuthenticationProtocol.swift in Sources */,
+				DFD2DEE31D3DF437001B77EA /* FYHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,23 +338,29 @@
 		};
 		DFD2DEDF1D3DEA9B001B77EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 591123B5940E3817C7FA13FE /* Pods-FYGoogleSignIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FYGoogleSignIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.julysystems.FYGoogleSignIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FYGoogleSignIn/FYGoogleSignIn-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		DFD2DEE01D3DEA9B001B77EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199C7EC90C8FA9F9259184EE /* Pods-FYGoogleSignIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FYGoogleSignIn/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.julysystems.FYGoogleSignIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FYGoogleSignIn/FYGoogleSignIn-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -288,6 +383,7 @@
 				DFD2DEE01D3DEA9B001B77EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
